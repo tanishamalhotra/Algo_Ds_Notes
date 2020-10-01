@@ -3,14 +3,14 @@
 #You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
 def twoSum(self, nums: List[int], target: int) -> List[int]:
-        dictionary = {}
-        answer = []
+    dictionary = {}
+    answer = []
         
-        for i in range(len(nums)):
-            secondNumber = target-nums[i]
-            if(secondNumber in dictionary.keys()):
-                secondIndex = nums.index(secondNumber)
-                if(i != secondIndex):
-                    return sorted([i, secondIndex])
+    for i in range(len(nums)):
+        secondNumber = target-nums[i]
+        if(secondNumber in dictionary.keys()):
+            secondIndex = nums.index(secondNumber)
+            if(i != secondIndex):
+                return sorted([i, secondIndex])
                 
-            dictionary.update({nums[i]: i})
+        dictionary.update({nums[i]: i})
